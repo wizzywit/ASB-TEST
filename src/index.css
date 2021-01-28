@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Google Sans";
+  src: url("./assets/font/ProductSans-Regular.eot");
+  src: url("./assets/font/ProductSans-Regular.woff") format("woff"),
+    url("./assets/font/ProductSans-Regular.woff2") format("woff2"),
+    url("./assets/font/ProductSans-Regular.svg") format("svg");
+}
+body {
+  margin: 0;
+  font-family: "Google Sans";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
