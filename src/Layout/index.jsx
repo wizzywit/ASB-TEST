@@ -26,7 +26,7 @@ import entriesICON2 from '../assets/svg/entries2.svg'
 import divisionICON from '../assets/svg/division.svg'
 import divisionICON2 from '../assets/svg/division2.svg'
 import Menu from '../components/Menu'
-import { Switch, Route, useLocation } from 'react-router-dom'
+import { Switch, Route, useLocation, Redirect } from 'react-router-dom'
 import Divisions from '../pages/Divisions'
 import BreadCrumbs from '../components/BreadCrumbs'
 
@@ -83,14 +83,14 @@ const Layout = () => {
         <NotificationContainer>
           <SearchField>
             <SearchInput />
-            <SearchIcon src={SearchICON} />
+            <SearchIcon src={SearchICON} alt=""/>
           </SearchField>
-          <BellContainer src={BellLOGO} />
+          <BellContainer src={BellLOGO} alt=""/>
           <UserContainer>
             <UserCircle>
-              <img src={userLOGO} />
+              <img src={userLOGO} alt=""/>
             </UserCircle>
-            <img src={arrowLOGO} />
+            <img src={arrowLOGO} alt=""/>
           </UserContainer>
         </NotificationContainer>
       </HeaderContainer>
@@ -107,7 +107,7 @@ const Layout = () => {
             <Divisions />
           </Route>
           <Route path='/'>
-            <Divisions />
+            <Redirect to='/divisions' />
           </Route>
         </Switch>
       </ContentContainer>

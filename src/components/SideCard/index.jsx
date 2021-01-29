@@ -12,7 +12,7 @@ const SideCard = ({ icon, title, children, noBackground }) => {
     <Container noBackground={noBackground}>
       <HeaderContainer>
         <CardIconContainer>
-          <img src={icon} />
+          <img src={icon} alt=""/>
         </CardIconContainer>
         <HeaderTitle>{title}</HeaderTitle>
       </HeaderContainer>

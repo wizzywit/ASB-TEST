@@ -1,5 +1,77 @@
 import styled from 'styled-components'
+export const TableMainText = styled.h2`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #25213b;
+  margin: 0px;
+`
+export const EntriesContainer = styled.div`
+  display: flex;
+  margin-bottom: 2px;
+`
+export const EntriesText = styled.h2`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #878592;
+  margin: 0;
+`
+export const TableBullet = styled.img`
+  margin-right: 5px;
+  margin-left: 5px;
+`
+export const TableTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+export const TableSecText = styled.h2`
+  margin: 0;
+  margin-bottom: 5px;
+  font-style: normal;
+  font-weight: ${({ bold }) => (bold ? 'bold' : '500')};
+  font-size: 12px;
+  line-height: 15px;
 
+  color: #25213b;
+`
+export const TableText = styled.h2`
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+
+  color: #878592;
+`
+export const TableStatusContainer = styled.div`
+  padding: 2px 12px 2px 12px;
+  border-radius: 11px;
+  width: fit-content;
+  h2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0;
+  }
+  ${({ status }) =>
+    status > 0
+      ? `
+        background: #F6F3FF;
+        h2{
+            color: #8C70FF;
+        }
+    `
+      : `
+         background: #FFF6DE;
+         h2{
+            color: #F4B400;
+        }
+      `};
+`
 export const CardsContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -68,4 +140,36 @@ export const DateText = styled.h2`
   line-height: 140%;
   color: #a1aace;
   margin: 0;
+`
+export const RiskArrow = styled.img`
+  margin-right: 14px;
+`
+
+export const RiskContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  h2 {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0;
+
+    ${({ risk }) =>
+        risk === 1
+          ? `
+        color: #3AB65C;
+        font-weight: 500;
+    `
+          : risk === 2
+          ? `
+        color: #3C3AB6;
+        font-weight: normal;
+      `
+          : `
+        color: #B63A3A;
+        font-weight: normal;
+      `};
+  }
 `
