@@ -67,7 +67,7 @@ const Divisions = () => {
             {infos?.map((info, ind) => (
               <SingleInfo key={ind}>
                 <IconWrapper>
-                  <img src={info.icon} />
+                  <img src={info.icon} alt=""/>
                 </IconWrapper>
                 {info.link === true ? (
                   <Link to={info.url}>
