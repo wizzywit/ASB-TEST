@@ -9,7 +9,9 @@ export const TableMainText = styled.h2`
 `
 export const EntriesContainer = styled.div`
   display: flex;
-  margin-bottom: 2px;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 7px;
 `
 export const EntriesText = styled.h2`
   font-style: normal;
@@ -29,7 +31,7 @@ export const TableTextContainer = styled.div`
 `
 export const TableSecText = styled.h2`
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: ${({ nomargin }) => (nomargin ? '0' : '5px')};
   font-style: normal;
   font-weight: ${({ bold }) => (bold ? 'bold' : '500')};
   font-size: 12px;
