@@ -1,4 +1,3 @@
-import crumbARROW from '../../assets/svg/crumbs-arrow.svg'
 import { CrumbArrow, CrumbsContainer, CrumbText } from './style'
 import CrumbARROW from '../../assets/svg/crumbs-arrow.svg'
 const BreadCrumbs = ({ crumbs }) => {
