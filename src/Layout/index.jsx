@@ -49,7 +49,6 @@ const Layout = () => {
   const match = useLocation()
   const [crumbs, setCrumbs] = useState([])
   useEffect(() => {
-    console.log(match.pathname)
     setCrumbs(
       [...menus]
         .filter(elem => {
@@ -57,7 +56,7 @@ const Layout = () => {
         })
         .map(elem => elem.title)
     )
-    console.log(crumbs)
+    //eslint-disable-next-line
   }, [match])
 
   return (
@@ -83,14 +82,14 @@ const Layout = () => {
         <NotificationContainer>
           <SearchField>
             <SearchInput />
-            <SearchIcon src={SearchICON} alt=""/>
+            <SearchIcon src={SearchICON} alt='' />
           </SearchField>
-          <BellContainer src={BellLOGO} alt=""/>
+          <BellContainer src={BellLOGO} alt='' />
           <UserContainer>
             <UserCircle>
-              <img src={userLOGO} alt=""/>
+              <img src={userLOGO} alt='' />
             </UserCircle>
-            <img src={arrowLOGO} alt=""/>
+            <img src={arrowLOGO} alt='' />
           </UserContainer>
         </NotificationContainer>
       </HeaderContainer>

@@ -32,8 +32,6 @@ const Table = ({ columns, data }) => {
     headerGroups,
     rows,
     prepareRow,
-    selectedFlatRows,
-    state: { selectedRowIds }
   } = useTable({ columns, data }, useRowSelect, hooks => {
     hooks.visibleColumns.push(columns => [
       {
