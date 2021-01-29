@@ -148,7 +148,7 @@ const TableData = () => {
             <TableTextContainer>
               <EntriesContainer>
                 <TableBullet src={bulletICON} alt=""/>
-                <TableSecText nomargin>{`${value.count} Unique Entries`}</TableSecText>
+                <TableSecText nomargin bold>{`${value.count} Unique Entries`}</TableSecText>
               </EntriesContainer>
               <EntriesText>{value.type}</EntriesText>
             </TableTextContainer>
