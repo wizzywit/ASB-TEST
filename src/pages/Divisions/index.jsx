@@ -53,12 +53,12 @@ const Divisions = () => {
       timestamp: '22:10 15/09/2020'
     }
   ]
-  const { columns, data } = TableData()
+  const { columns, data, isLoading } = TableData()
   return (
     <>
       <CardsContainer>
-        {cards?.map(card => (
-          <CustomCard number={card.number} info={card.info} />
+        {cards?.map((card, ind) => (
+          <CustomCard key={ind} number={card.number} info={card.info} />
         ))}
       </CardsContainer>
       <Section>
@@ -67,7 +67,7 @@ const Divisions = () => {
             {infos?.map((info, ind) => (
               <SingleInfo key={ind}>
                 <IconWrapper>
-                  <img src={info.icon} alt=""/>
+                  <img src={info.icon} alt='' />
                 </IconWrapper>
                 {info.link === true ? (
                   <Link to={info.url}>
@@ -96,7 +96,7 @@ const Divisions = () => {
           </SideCard>
         </CardSection>
         <TableSection>
-          <Table data={data} columns={columns} />
+          {isLoading ? '' : <Table data={data} columns={columns} />}
         </TableSection>
       </Section>
     </>

@@ -5,6 +5,11 @@ export const CrumbsContainer = styled.div`
   margin-bottom: 16px;
   justify-content: flex-start;
   align-items: center;
+  .bread{
+      display: flex;
+      justify-content: left;
+      align-items: center;
+  }
 `
 
 export const CrumbText = styled.h2`
