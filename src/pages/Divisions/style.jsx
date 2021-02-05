@@ -61,18 +61,20 @@ export const TableStatusContainer = styled.div`
   }
   ${({ status }) =>
     status > 0
-      ? `
+      ? 
+        `
+         background: #FFF6DE;
+         h2{
+            color: #F4B400;
+        }
+      ` : 
+        `
         background: #F6F3FF;
         h2{
             color: #8C70FF;
         }
     `
-      : `
-         background: #FFF6DE;
-         h2{
-            color: #F4B400;
-        }
-      `};
+    };
 `
 export const CardsContainer = styled.div`
   display: flex;
